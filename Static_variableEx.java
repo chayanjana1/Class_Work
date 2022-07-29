@@ -1,10 +1,20 @@
 package Oopsdemo;
+
+import java.util.Scanner;
+
 class Std
 {
 	int id;
 	String name,address;
 	long phno;
 	static String instName="Anudip";//static variable
+	//static block
+	static {
+		//instName="Anudip Foundation";
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter institution name:");
+	instName=sc.nextLine();
+	}
 	public  Std(int i,String n,String add,long ph)
 	{
 		id=i;
