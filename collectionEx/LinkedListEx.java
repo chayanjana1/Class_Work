@@ -1,5 +1,6 @@
 package collectionEx;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -81,6 +82,62 @@ public class LinkedListEx {
 	    	System.out.println(it.next());
 	    }
 	    
+	    if(names.contains("shawin pradhan"))
+	    {
+	    	System.out.println("data present");
+	    }
+	    else
+	    	System.out.println("data not present");
+	    	
+	       names.add("sanjib");
+	    	System.out.println(names);
+	    	System.out.println("last index of nill :"+names.lastIndexOf("sanjib"));
+	    	
+	    	//insert elements at the front of the list
+	    	names.push("roy");
+	    	names.push("amit");
+	    	
+	    	System.out.println(names);
+	    	
+	    	//remove and return the first element of the list.
+	    	System.out.println("Element popped: "+ names.pop());
+	    	System.out.println(names);
+	    	
+	    	
+	    	//poll()- retrieves and remove the head(first element) of the list.
+	    	System.out.println("Element popped: "+ names.poll());
+	    	System.out.println(names);
+	    	
+	    	//pollFirst()-retrieves and remove the first element of the list,return null if the list is empty.
+	    	
+	    	System.out.println("Element popped: "+names.pollFirst());
+	    	System.out.println(names);
+	    	
+//pollLast()-retrieves and remove the last element of the list,return null if the list is empty.
+	    	
+	    	System.out.println("Element popped: "+names.pollLast());
+	    	System.out.println(names);
+	   
+	    //convert linkedlist to arraylist
+	    	
+	    	List<String> list=new ArrayList<String>(names);
+	    	System.out.println("converting linkedlist to arraylist");
+	    	for(String str: list)
+	    	{
+	    		System.out.println(str);
+	    	}
+	    	
+	    	//convert linkedlist to array
+	    	String[] array=names.toArray(new String[names.size()]);
+	    	
+	    	System.out.println("converting linkedlist to array");
+	    	for(int i=0;i<array.length;i++)
+	    	{
+	    		System.out.println(array[i]);
+	    	}
+	    
+	    }
+	    
 		}
 
-}
+

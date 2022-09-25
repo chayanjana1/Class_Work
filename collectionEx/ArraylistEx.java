@@ -10,18 +10,34 @@ public class ArraylistEx {
 	public static void main(String[] args) {
 		//object using polymorphism
 		List<Integer> list=new ArrayList<Integer>();
-		//ArrayList<String> list2=new ArrayList<String>();
-	list.add(34);
-	list.add(56);
-	list.add(34);
-	list.add(45);
-	//list.add(null);
-	System.out.println(list);
-	System.out.println(list.size());
-	list.add(77);
-	list.add(99);
-	System.out.println("After adding: "+list);
-	System.out.println("size after adding: "+list.size());
+		
+		ArrayList<String> list2=new ArrayList<String>();
+		list2.add("nikhil");
+		String s1=list2.get(0);
+
+//	list.add(34);
+//	list.add(56);
+//	list.add(34);
+//	list.add(45);
+//	//list.add(null);
+//	System.out.println(list);
+//	System.out.println(list.size());
+//	list.add(77);
+//	list.add(99);
+//	System.out.println("After adding: "+list);
+//	System.out.println("size after adding: "+list.size());
+	
+	//non generic-can store any type of objects in the collection.
+	ArrayList alist=new ArrayList();  //Object type type
+	alist.add(67);
+	alist.add(12.34);
+	alist.add("string");
+	String s=(String)alist.get(1);
+	
+	
+	
+	
+	
 	// use for loop
 	//System.out.println("arrayList using for loop");//way 2
 	//for(int i=0;i<list.size();i++)
@@ -89,6 +105,16 @@ public class ArraylistEx {
 	
 	}
 	
-	
-
 }
+
+/*
+ * advantages of generic:
+ * 1.type sefety- you can hold only a single type of objects in generics. it doesn't
+ * allow to store other objects.
+ * 
+ * 2.type casting is not required: there is no need to typecast the object.
+ * 
+ * 3.compile-time checking: it is checking at compile time so problem will not occure at runtime.
+ */
+
+

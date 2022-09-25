@@ -1,6 +1,6 @@
 package collectionEx;
 
-public class User {
+public class User implements Comparable<User>{
  private int id;
  private String name;
  private String address;
@@ -36,6 +36,18 @@ public User() {
 @Override
 public String toString() {
 	return "User [id=" + id + ", name=" + name + ", address=" + address + "]";
+}
+
+
+@Override
+public int compareTo(User o) {
+	//if(id==o.id)
+	//	return 0;
+	//	else if(id>o.id)  //else if(id<o.id) for descending order
+	//		return 1;
+	//	else
+	//		return -1;
+	return ((name.length()>o.name.length())?1 : -1);
 }
  
 }	
